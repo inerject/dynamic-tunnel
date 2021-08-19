@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  <service_name>:
+    image: inerject/dynamic-tunnel
+    container_name: <container_name>
+    restart: unless-stopped
+    volumes:
+      - $SSH_DATA:/root/ssh:ro
+    ports:
+      - $CONNECTION_PORT:3000
+    environment:
+      LOCAL_HOST: $LOCAL_HOST # optional
+      DEST_PORT: $DEST_PORT # optional
+      DEST_HOST: $DEST_HOST
+      DEST_USER: $DEST_USER
