@@ -12,5 +12,6 @@ services:
     environment:
       LOCAL_HOST: $LOCAL_HOST # optional
       DEST_PORT: $DEST_PORT # optional
+      IDENTITY_FILE: $IDENTITY_FILE # optional
       DEST_HOST: $DEST_HOST
       DEST_USER: $DEST_USER
